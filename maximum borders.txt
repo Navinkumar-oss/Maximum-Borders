@@ -1,0 +1,27 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc= new Scanner(System.in);
+        int tCase= sc.nextInt();
+        for(int i=0; i<tCase; i++){
+            int rows=sc.nextInt();
+            int colms=sc.nextInt();
+            int count=0, prev=0;
+            for(int j=0; j<rows; j++){
+                String s=sc.nextLine();
+                for(int k=0;k<colms; k++){
+                    if(s.charAt(k)=='#'){
+                        count++;
+                    }
+                }
+                if(count>prev){
+                    prev=count;
+                    count=0;
+                }
+                System.out.println(prev);
+            }
+           
+        }
+       
+    }
+}
